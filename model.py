@@ -11,7 +11,7 @@ import time
 
 
 
-"""
+
 def q_learning(spark, num_episodes, ratings, similarity_scores):
     # Initialize variables
     movies = [row['newMovieId'] for row in ratings.select('newMovieId').distinct().collect()]
@@ -85,6 +85,8 @@ def q_learning(spark, num_episodes, ratings, similarity_scores):
         epsilon *= 0.9997
 
     return Q, optimal_policy, avg_rewards
+
+
 """
 
 def q_learning(spark, num_episodes, ratings, similarity_scores):
@@ -156,4 +158,4 @@ def q_learning(spark, num_episodes, ratings, similarity_scores):
 
         actions_df.unpersist()
 
-    return Q, optimal_policy, avg_rewards
+    return Q, optimal_policy, avg_rewards"""
